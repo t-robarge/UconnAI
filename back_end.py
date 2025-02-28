@@ -7,7 +7,7 @@ app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
 
 # Load your API key from an environment variable
-API_KEY = os.environ.get("DIFY_API_KEY")
+API_KEY = 'app-xuGoZE6hBFGm40yttVYpOOQ8'
 # Dify API endpoint for sending chat messages
 API_URL = "https://api.dify.ai/v1/chat-messages"
 
@@ -19,8 +19,6 @@ from flask import Flask, request, redirect, session, url_for
 import requests
 import xml.etree.ElementTree as ET
 
-app = Flask(__name__)
-app.secret_key = 'your_secret_key'  # Replace with your own secret key
 
 CAS_LOGIN_URL = "https://login.uconn.edu/cas/login"
 CAS_VALIDATE_URL = "https://login.uconn.edu/cas/serviceValidate"
