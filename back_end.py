@@ -2,12 +2,13 @@ from flask import Flask, request, jsonify, make_response
 from flask_cors import CORS
 import requests
 import os
+from dotenv import load_dotenv
 
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
-
+load_dotenv()
 # Load your API key from an environment variable
-API_KEY = 'app-xuGoZE6hBFGm40yttVYpOOQ8'
+API_KEY = os.getenv('API_KEY')
 # Dify API endpoint for sending chat messages
 API_URL = "https://api.dify.ai/v1/chat-messages"
 
